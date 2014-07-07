@@ -62,6 +62,7 @@ cmake_minimum_required(VERSION 2.8)
    )
    
    
+   
    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include
                           ${CMAKE_CURRENT_SOURCE_DIR}/lib
       )
@@ -83,7 +84,7 @@ else()
       find_package( Boost REQUIRED COMPONENTS system )
    endif()
 endif()
-      
+
 
 # To enable static linking of the final daoopt binary
 option(DAOOPT_LINK_STATIC "Link binary statically" OFF)
