@@ -7,3 +7,4 @@ add_subdirectory(maxflow)
 add_subdirectory(mrf)
 #add_subdirectory(gco) PATCHH DOES NOT WORK FIXME!!!!
 add_subdirectory(conicbundle)
+add_subdirectory(daoopt)
