@@ -7,7 +7,7 @@ externalproject_add( ibfs
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 )
 
-ExternalProject_Add_Step(ibfs e2
+ExternalProject_Add_Step(ibfs copyCMakeFile
   COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/ibfs/files/CMakeLists.txt ${PROJECT_BINARY_DIR}/ibfs/ibfs-prefix/src/ibfs/CMakeLists.txt
   DEPENDEES patch
   DEPENDERS configure

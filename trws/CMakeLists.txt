@@ -7,7 +7,7 @@ externalproject_add( trws
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 )
 
-ExternalProject_Add_Step(trws e2
+ExternalProject_Add_Step(trws copyCMakeFile
   COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/trws/files/CMakeLists.txt ${PROJECT_BINARY_DIR}/trws/trws-prefix/src/trws/CMakeLists.txt
   DEPENDEES patch
   DEPENDERS configure

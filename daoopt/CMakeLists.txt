@@ -7,7 +7,7 @@ externalproject_add( daoopt
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 )
 
-ExternalProject_Add_Step(daoopt e2
+ExternalProject_Add_Step(daoopt copyCMakeFile
   COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/daoopt/files/CMakeLists.txt ${PROJECT_BINARY_DIR}/daoopt/daoopt-prefix/src/daoopt/CMakeLists.txt
   DEPENDEES patch
   DEPENDERS configure

@@ -65,38 +65,28 @@ install (TARGETS opengm-external-conicbundle DESTINATION lib/opengm/externals/)
 install (TARGETS opengm-external-conicbundle-shared DESTINATION lib/opengm/externals/)
 
 
-#install(DIRECTORY ""
-#    DESTINATION include/opengm/externals/conicbundle
-#    FILES_MATCHING
-#    PATTERN "*.h"
-#    PATTERN ".svn" EXCLUDE
-#)
-
-
-
-
-install(DIRECTORY ${CURRENT_SOURCE_DIR}CBsources
-    DESTINATION include/opengm/externals/conicbundle/cb
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/CBsources
+    DESTINATION include/opengm/externals/conicbundle/
     FILES_MATCHING
     PATTERN "*.hxx"
     PATTERN ".svn" EXCLUDE
 )
 
-install(DIRECTORY ${CURRENT_SOURCE_DIR}Tools
-    DESTINATION include/opengm/externals/conicbundle/Tools
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Tools
+    DESTINATION include/opengm/externals/conicbundle/
     FILES_MATCHING
     PATTERN "*.hxx"
     PATTERN ".svn" EXCLUDE
 )
 
-install(DIRECTORY ${CURRENT_SOURCE_DIR}Matrix
-    DESTINATION include/opengm/externals/conicbundle/Tools
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Matrix
+    DESTINATION include/opengm/externals/conicbundle/
     FILES_MATCHING
     PATTERN "*.hxx"
     PATTERN ".svn" EXCLUDE
 )
 
-install(DIRECTORY ${CURRENT_SOURCE_DIR}include
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include
     DESTINATION include/opengm/externals/conicbundle
     FILES_MATCHING
     PATTERN "*.hxx"

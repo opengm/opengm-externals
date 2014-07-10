@@ -7,7 +7,7 @@ externalproject_add( gco
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 )
 
-ExternalProject_Add_Step(gco e2
+ExternalProject_Add_Step(gco copyCMakeFile
   COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/gco/files/CMakeLists.txt ${PROJECT_BINARY_DIR}/gco/gco-prefix/src/gco/CMakeLists.txt
   DEPENDEES patch
   DEPENDERS configure
