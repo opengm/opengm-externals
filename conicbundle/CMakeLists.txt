@@ -15,7 +15,7 @@ ExternalProject_Add_Step(conicbundle copyConfigFile
 ) 
 
 
-ExternalProject_Add_Step(conicbundle e2
+ExternalProject_Add_Step(conicbundle copyCMakeFile
   COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/conicbundle/files/CMakeLists.txt ${PROJECT_BINARY_DIR}/conicbundle/conicbundle-prefix/src/conicbundle/CMakeLists.txt
   DEPENDEES patch
   DEPENDERS configure

@@ -7,7 +7,7 @@ externalproject_add( qpbo
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 )
 
-ExternalProject_Add_Step(qpbo e2
+ExternalProject_Add_Step(qpbo copyCMakeFile
   COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/qpbo/files/CMakeLists.txt ${PROJECT_BINARY_DIR}/qpbo/qpbo-prefix/src/qpbo/CMakeLists.txt
   DEPENDEES patch
   DEPENDERS configure

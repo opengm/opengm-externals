@@ -25,7 +25,7 @@ externalproject_add( mrf
 add_dependencies(mrf mrftrws)
 
 
-ExternalProject_Add_Step(mrf e3
+ExternalProject_Add_Step(mrf copytypeTruncatedQuadratic2DFile
   COMMAND ${CMAKE_COMMAND} -E copy  ${PROJECT_BINARY_DIR}/mrf/mrftrws-prefix/src/mrftrws/typeTruncatedQuadratic2D.h
   										   ${PROJECT_BINARY_DIR}/mrf/mrf-prefix/src/mrf/typeTruncatedQuadratic2D.h
   DEPENDEES patch
@@ -33,7 +33,7 @@ ExternalProject_Add_Step(mrf e3
 ) 
 
 
-ExternalProject_Add_Step(mrf e2
+ExternalProject_Add_Step(mrf copyCMakeFile
   COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/mrf/files/CMakeLists.txt ${PROJECT_BINARY_DIR}/mrf/mrf-prefix/src/mrf/CMakeLists.txt
   DEPENDEES patch
   DEPENDERS configure

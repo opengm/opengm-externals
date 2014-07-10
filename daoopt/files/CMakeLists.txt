@@ -107,12 +107,13 @@ install (TARGETS opengm-external-daoopt DESTINATION lib/opengm/externals/)
 install (TARGETS opengm-external-daoopt-shared DESTINATION lib/opengm/externals/)
 
 
-#install(DIRECTORY daoopt
-#    DESTINATION include/opengm/externals
-#    FILES_MATCHING
-#    PATTERN "*.h"
-#    PATTERN ".svn" EXCLUDE
-#)
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
+   DESTINATION include/opengm/externals/daoopt
+   FILES_MATCHING
+   PATTERN "*.h"
+   PATTERN ".svn" EXCLUDE
+)
+
 #
 #install(DIRECTORY Eigen
 #    DESTINATION include/opengm/externals

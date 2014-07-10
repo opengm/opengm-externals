@@ -7,7 +7,7 @@ externalproject_add( maxflow
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 )
 
-ExternalProject_Add_Step(maxflow e2
+ExternalProject_Add_Step(maxflow copyCMakeFile
   COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/maxflow/files/CMakeLists.txt ${PROJECT_BINARY_DIR}/maxflow/maxflow-prefix/src/maxflow/CMakeLists.txt
   DEPENDEES patch
   DEPENDERS configure
