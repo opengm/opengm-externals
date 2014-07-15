@@ -1,7 +1,8 @@
 
 include(ExternalProject)
 externalproject_add( daoopt
-    GIT_REPOSITORY git@github.com:joergkappes/daoopt.git
+   # GIT_REPOSITORY git@github.com:joergkappes/daoopt.git
+    GIT_REPOSITORY https://github.com/joergkappes/daoopt.git
     #PATCH_COMMAND patch 
     #    -s -d ${PROJECT_BINARY_DIR}/daoopt/daoopt-prefix/src/daoopt -p1 < ${PROJECT_SOURCE_DIR}/daoopt/files/daoopt.patch -N -r -
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
