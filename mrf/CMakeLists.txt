@@ -4,14 +4,27 @@ include(ExternalProject)
 
 
 
-externalproject_add( mrftrws
+if( CMAKE_MAJOR_VERSION GREATER 2 OR CMAKE_MINOR_VERSION GREATER 8 OR CMAKE_PATCH_VERSION GREATER 10)
+  externalproject_add( mrftrws
     URL http://ftp.research.microsoft.com/downloads/dad6c31e-2c04-471f-b724-ded18bf70fe3/TRW_S-v1.3.zip
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
     INSTALL_COMMAND ""
-)
+    )
+else()
+  externalproject_add( mrftrws
+    DOWNLOAD_COMMAND  wget -q http://ftp.research.microsoft.com/downloads/dad6c31e-2c04-471f-b724-ded18bf70fe3/TRW_S-v1.3.zip -P /tmp/
+    CONFIGURE_COMMAND ""
+    BUILD_COMMAND ""
+    INSTALL_COMMAND ""
+    )  
+  ExternalProject_Add_Step( mrftrws UnzipFile
+    COMMAND unzip -juqn /tmp/TRW_S-v1.3.zip -d ${PROJECT_BINARY_DIR}/mrf/mrftrws-prefix/src/mrftrws/
+    DEPENDEES download
+    DEPENDERS patch
+    ) 
 
-
+endif()
 
 
 
